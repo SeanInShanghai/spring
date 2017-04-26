@@ -15,16 +15,6 @@ import com.programcreek.model.UserExample;
 @Controller
 public class UserController {
 
-//	@Autowired
-//	UserMapper userMapper;
-//	@RequestMapping("getTotalNumber")
-//	public ModelAndView getNumber(){
-//		ModelAndView model = new ModelAndView("userController");
-//		UserExample example = new UserExample();
-//		userMapper.countByExample(example);
-//		model.addObject("number", 0);
-//		return model;
-//	}
 	@Autowired
 	UserMapper userMapper;
 	@RequestMapping(value = "getTotalNumber", method = RequestMethod.GET)
