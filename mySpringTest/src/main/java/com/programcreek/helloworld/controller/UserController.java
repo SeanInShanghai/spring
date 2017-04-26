@@ -30,7 +30,11 @@ public class UserController {
 	@RequestMapping(value = "getTotalNumber", method = RequestMethod.GET)
 	public ModelAndView getNumer(){
 		ModelAndView model = new ModelAndView("userController");
-		model.addObject("number", 0);
+		String name = "sean";
+		UserExample example = new UserExample();
+		example.createCriteria().andNameEqualTo(name);
+		int num = userMapper.countByExample(example);
+		model.addObject("number", num);
 		return model;
 	}
 	
